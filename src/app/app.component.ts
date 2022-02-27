@@ -20,7 +20,7 @@ export class AppComponent {
   search(): void {
     const jobs: any[] = [];
     this.jobsCopy.forEach((job) => {
-      if (job.title[0].startsWith(this.searchInput)) {
+      if (job.title[0].toLowerCase().startsWith(this.searchInput)) {
         jobs.push(job);
       }
     })

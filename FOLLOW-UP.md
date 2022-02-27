@@ -5,7 +5,9 @@
 
 2. If you had more time, what further improvements or new features would you add?
     
-    I would add more styling to the project and seperate it into more components 
+    I would add more styling to the project and seperate it into more components as
+    well as a dialog to display more information about the jobs which would be 
+    easy to do.
 
 3. Which parts are you most proud of? And why?
 

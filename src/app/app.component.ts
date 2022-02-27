@@ -14,7 +14,6 @@ export class AppComponent {
     axios.get("https://api.crossref.org/works?filter=has-full-text:true&mailto=andrejjj222@gmail.com").then((response) => {
       this.jobs = Object.values(response.data.message.items)
       this.jobsCopy = this.jobs
-      console.log(this.jobs)
     })
   }
   search(): void {

@@ -9,6 +9,7 @@ import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent
@@ -21,7 +22,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatGridListModule,
     MatInputModule,
     FormsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

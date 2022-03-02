@@ -13,19 +13,21 @@
   </div>
   <div>
     <mat-grid-list cols="2" rowHeight="2:1">
-      <mat-grid-tile *ngFor="let job of jobs" class="border"
+      <mat-grid-tile *ngFor="let job of (jobs | 
+      slice: lowValue : highValue)" class="border"
         ><mat-card class="mat-elevation-z0 bc-transparent">
           <div>{{ job.title[0] }}</div>
         </mat-card></mat-grid-tile
       >
     </mat-grid-list>
-    <!-- <mat-paginator
-      [length]="100"
-      [pageSize]="10"
-      [pageSizeOptions]="[5, 10, 25, 100]"
-      aria-label="Select page"
+    <mat-paginator
+      [length]="jobs.length"
+      pageSize="5"
+      (page)="getPaginatorData($event)"
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons="false"
     >
-    </mat-paginator> -->
+    </mat-paginator>
   </div>
 </div>
 

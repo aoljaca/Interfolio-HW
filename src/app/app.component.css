@@ -16,3 +16,7 @@
     justify-content: center;
     border: 10px black solid ;
 }
+
+.bc-transparent {
+  background-color: transparent;
+}

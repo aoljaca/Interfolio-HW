@@ -1,20 +1,31 @@
 <div class="app">
-  <header class="header">
-    Jobs
-  </header>
+  <header class="header">Jobs</header>
   <div>
     <mat-form-field class="full-width" appearance="fill">
-      <textarea matInput placeholder="Search" class="textarea" [(ngModel)]="searchInput" (ngModelChange)="search()"></textarea>
+      <textarea
+        matInput
+        placeholder="Search"
+        class="textarea"
+        [(ngModel)]="searchInput"
+        (ngModelChange)="search()"
+      ></textarea>
     </mat-form-field>
   </div>
   <div>
     <mat-grid-list cols="2" rowHeight="2:1">
       <mat-grid-tile *ngFor="let job of jobs" class="border"
-        ><mat-card>
+        ><mat-card class="mat-elevation-z0 bc-transparent">
           <div>{{ job.title[0] }}</div>
         </mat-card></mat-grid-tile
       >
     </mat-grid-list>
+    <!-- <mat-paginator
+      [length]="100"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Select page"
+    >
+    </mat-paginator> -->
   </div>
 </div>
 
